@@ -1,0 +1,32 @@
+.footer {
+  background-color: $deep;
+  padding: 70px 0;
+  &__inner {
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    font-size: 0;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    h2 {
+      @include middle-header($white);
+      margin-bottom: 20px;
+    }
+  }
+  &__logo {
+  }
+  &__descr {
+    max-width: 344px;
+
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 170%;
+
+    color: rgba(255, 255, 255, 0.7);
+  }
+}

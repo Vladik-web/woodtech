@@ -1,0 +1,21 @@
+.nav {
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  &__list-item {
+  }
+  &__list-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+    color: $white;
+    padding: 7px 15px;
+    &.active {
+      background-color: rgba(#c4c4c4, 0.2);
+      border-radius: $radius;
+    }
+  }
+}

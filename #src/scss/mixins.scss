@@ -1,0 +1,60 @@
+@mixin middle-header($color) {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: $color;
+}
+
+@mixin small-text($color) {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 170%;
+
+  color: $color;
+}
+
+@mixin regular-header($color) {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 29px;
+  line-height: 34px;
+  color: $color;
+}
+@mixin read-more($color) {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 170%;
+  color: $color;
+  text-decoration-line: underline;
+}
+
+@mixin typography-header {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 35px;
+
+  color: #000000;
+}
+
+@mixin btn {
+  padding: 12px 30px;
+  background-color: $accent;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 145%;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+}

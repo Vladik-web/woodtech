@@ -1,0 +1,29 @@
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+  padding-top: 40px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    font-size: 0;
+  }
+  &__nav {
+  }
+  &__soc {
+    border-radius: 70px;
+    padding: 5px 15px;
+    background-color: rgba(#c4c4c4, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  &__item {
+    font-size: 0;
+  }
+}

@@ -1,0 +1,19 @@
+body {
+  font-size: 14px;
+  font-family: "Raleway";
+  color: $text;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1150px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.btn {
+  color: $white;
+  border: none;
+  border-radius: $radius;
+
+  @include btn;
+}

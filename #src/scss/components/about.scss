@@ -1,0 +1,119 @@
+.about {
+  padding: 72px 0 81px 50px;
+  &__inner {
+    display: flex;
+    column-gap: 80px;
+  }
+  &__left {
+    &-text {
+      position: absolute;
+      bottom: 60px;
+      right: -25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 240px;
+      height: 95px;
+      color: $white;
+      background: rgba(32, 35, 40, 0.9);
+      border-radius: $radius;
+      p {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+        justify-content: center;
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 25px;
+      }
+      span {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 52px;
+        line-height: 61px;
+      }
+    }
+    &-image {
+      position: relative;
+      &::before {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        width: 235px;
+        height: 280px;
+        background: #202328;
+        opacity: 0.1;
+        border-radius: $radius;
+      }
+      img {
+        border-radius: $radius;
+        display: block;
+      }
+    }
+  }
+  &__right {
+    & > h3 {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 19px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      color: $accent;
+    }
+    & > h2 {
+      @include regular-header($text);
+      max-width: 420px;
+    }
+    & > picture {
+      font-size: 0;
+      display: block;
+      margin: 27px 0;
+    }
+    & > p {
+      margin-bottom: 35px;
+      @include small-text($text);
+    }
+    &-list {
+      display: flex;
+      column-gap: 20px;
+      img {
+        display: block;
+      }
+    }
+    &-item {
+      a {
+        @include read-more($text);
+      }
+      p {
+        @include small-text($text);
+        margin-bottom: 10px;
+      }
+    }
+    &-head {
+      display: flex;
+      column-gap: 15px;
+      align-items: center;
+      border-bottom: 1px solid $light-div;
+      padding-bottom: 13px;
+      margin-bottom: 15px;
+      h3 {
+        max-width: 182px;
+        height: 53px;
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 19px;
+        line-height: 22px;
+
+        color: $text;
+      }
+    }
+  }
+}

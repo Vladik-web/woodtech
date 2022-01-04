@@ -1,0 +1,165 @@
+.best-works {
+  padding: 60px 0;
+  background-image: linear-gradient($dark 50%, $light-bg 50%);
+  &__inner {
+  }
+  &__top {
+    margin-bottom: 70px;
+    column-gap: 100px;
+    display: flex;
+    margin: 0 auto;
+    max-width: 932px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__left {
+    flex: 1 1 50%;
+    & > p {
+      text-align: right;
+      max-width: 417px;
+      @include small-text($white);
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -50px;
+        height: 120px;
+        width: 1px;
+        background-color: #2d3038;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  &__right {
+    flex: 1 1 50%;
+    & > h3 {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 19px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      color: $accent;
+    }
+    & > h2 {
+      @include regular-header($white);
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    margin: 55px 0 45px 0;
+    li {
+      list-style: none;
+      background-color: $white;
+      flex: 1 1 360px;
+      transition: 0.25s ease;
+      &:hover {
+        transform: translateY(-10px);
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        &:hover {
+          .best-works__title {
+            text-decoration: underline;
+            svg circle {
+              fill: $accent;
+            }
+          }
+          .best-works__info {
+            border-color: $accent;
+          }
+        }
+      }
+    }
+  }
+  &__image {
+    overflow: hidden;
+    font-size: 0;
+    position: relative;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      transform: scale(1);
+      transition: 0.25s ease;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        0deg,
+        rgba(32, 35, 40, 0.25),
+        rgba(32, 35, 40, 0.25)
+      );
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      transition: 0.2s ease;
+      transform: scale(0);
+      background: url(../img/best-works/decorations.svg) no-repeat center center /
+        cover;
+    }
+    &:hover {
+      &::after {
+        transform: scale(1);
+      }
+      &::before {
+        transform: scale(0);
+      }
+    }
+  }
+  &__info {
+    transition: 0.25s ease;
+    padding: 25px 25px 30px 30px;
+    border-bottom: 3px solid $light-disabled;
+  }
+  &__place {
+    display: flex;
+    align-items: center;
+    column-gap: 11px;
+    margin-bottom: 5px;
+
+    span {
+      color: #989da5;
+
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 170%;
+    }
+  }
+  &__title {
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 125%;
+    color: $text;
+    transition: 0.25s ease;
+    svg {
+      flex-shrink: 0;
+      circle {
+        transition: 0.25s ease;
+      }
+    }
+  }
+  &__btn {
+    margin: 0 auto;
+    display: block;
+  }
+}
