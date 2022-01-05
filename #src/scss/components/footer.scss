@@ -2,10 +2,10 @@
   background-color: $deep;
   padding: 70px 0;
   &__inner {
+    position: relative;
   }
   &__list {
     display: flex;
-    justify-content: space-between;
   }
   &__logo {
     font-size: 0;
@@ -15,7 +15,65 @@
   &__item {
     h2 {
       @include middle-header($white);
-      margin-bottom: 20px;
+      padding-bottom: 20px;
+      &.footer__nav {
+        position: relative;
+        margin-bottom: 20px;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -3px;
+          width: 25px;
+          height: 3px;
+          border-radius: $radius;
+          background-color: $accent;
+        }
+      }
+    }
+    ul {
+      li {
+        a {
+          display: block;
+          padding: 7px 15px 7px 0;
+          font-family: "Raleway";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          color: rgba(255, 255, 255, 0.7);
+          text-decoration: none;
+          transition: 0.25s ease;
+          &:hover,
+          &:focus {
+            color: $accent;
+            text-decoration: underline;
+          }
+        }
+        &:not(:last-child) {
+          margin-bottom: 3px;
+        }
+      }
+    }
+    &:nth-child(1),
+    &:nth-child(4) {
+      flex: 2;
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      flex: 1;
+    }
+    &:nth-child(4) {
+      flex: 0 1 265px;
+    }
+    p.footer__last-p {
+      max-width: 265px;
+
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 170%;
+      margin-bottom: 35px;
+      color: rgba(255, 255, 255, 0.7);
     }
   }
   &__logo {
@@ -28,5 +86,55 @@
     line-height: 170%;
 
     color: rgba(255, 255, 255, 0.7);
+  }
+  &__social {
+    &-list {
+      display: flex;
+      column-gap: 12px;
+      align-items: center;
+    }
+    &-item {
+      margin-bottom: 0 !important;
+      a {
+        border-radius: $radius;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        width: 40px;
+        height: 40px;
+        display: flex !important;
+
+        font-size: 0;
+        justify-content: center;
+        align-items: center;
+        padding: 0 !important;
+        &:hover {
+          background-color: $accent;
+          border: 1px solid $accent;
+          svg path {
+            fill: $white;
+            fill-opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  &__btn-up {
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    transition: 0.25s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
+    &:active {
+      transform: scale(0.9);
+    }
   }
 }

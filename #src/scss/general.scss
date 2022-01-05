@@ -11,9 +11,20 @@ body {
   margin: 0 auto;
 }
 .btn {
+  cursor: pointer;
   color: $white;
   border: none;
   border-radius: $radius;
 
   @include btn;
+}
+.title {
+  margin-bottom: 25px;
+  @include section-text-title($text);
+}
+.descr {
+  max-width: 550px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  @include section-text-description($text);
 }

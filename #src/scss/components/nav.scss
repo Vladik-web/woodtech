@@ -18,4 +18,16 @@
       border-radius: $radius;
     }
   }
+  &.black {
+    .active {
+      background-color: $accent;
+      border-radius: $radius;
+      color: $white;
+    }
+    .nav__list-link {
+      &:not(.active) {
+        color: $text;
+      }
+    }
+  }
 }

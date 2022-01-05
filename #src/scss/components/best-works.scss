@@ -57,8 +57,10 @@
       background-color: $white;
       flex: 1 1 360px;
       transition: 0.25s ease;
+      border-bottom: 3px solid $light-disabled;
       &:hover {
         transform: translateY(-10px);
+        border-bottom: 3px solid $accent;
       }
       a {
         display: block;
@@ -69,9 +71,6 @@
             svg circle {
               fill: $accent;
             }
-          }
-          .best-works__info {
-            border-color: $accent;
           }
         }
       }
@@ -124,7 +123,6 @@
   &__info {
     transition: 0.25s ease;
     padding: 25px 25px 30px 30px;
-    border-bottom: 3px solid $light-disabled;
   }
   &__place {
     display: flex;
