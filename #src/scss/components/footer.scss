@@ -6,6 +6,8 @@
   }
   &__list {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
   }
   &__logo {
     font-size: 0;
@@ -74,6 +76,22 @@
       line-height: 170%;
       margin-bottom: 35px;
       color: rgba(255, 255, 255, 0.7);
+    }
+    @media (max-width: 1023px) {
+      &:nth-child(4) {
+        flex: 1 1 100%;
+        p {
+          max-width: fit-content;
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      &:nth-child(1) {
+        flex: 1 1 100%;
+        p {
+          max-width: fit-content;
+        }
+      }
     }
   }
   &__logo {

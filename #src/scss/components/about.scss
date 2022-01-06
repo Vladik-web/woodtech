@@ -1,10 +1,22 @@
 .about {
   padding: 72px 0 81px 50px;
+  @media (max-width: 1023px) {
+    padding-left: 0;
+  }
   &__inner {
     display: flex;
     column-gap: 80px;
+    @media (max-width: 1023px) {
+      flex-direction: column;
+    }
   }
   &__left {
+    @media (max-width: 1023px) {
+      width: fit-content;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+
     &-text {
       transition: 0.5s ease;
       position: absolute;
@@ -18,6 +30,11 @@
       color: $white;
       background: rgba(32, 35, 40, 0.9);
       border-radius: $radius;
+      @media (max-width: 550px) {
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
 
       p {
         display: flex;
@@ -57,6 +74,9 @@
       img {
         border-radius: $radius;
         display: block;
+        @media (max-width: 550px) {
+          width: 100%;
+        }
       }
     }
     &:hover {
@@ -66,6 +86,11 @@
       }
       .about__left-text {
         transform: translateZ(20px) scale(1.2);
+      }
+      @media (max-width: 550px) {
+        .about__left-text {
+          transform: translateX(-50%) scale(1);
+        }
       }
     }
   }
@@ -83,6 +108,9 @@
     & > h2 {
       @include regular-header($text);
       max-width: 420px;
+      @media (max-width: 1023px) {
+        max-width: fit-content;
+      }
     }
     & > picture {
       font-size: 0;
@@ -99,10 +127,18 @@
       img {
         display: block;
       }
+      @media (max-width: 550px) {
+        row-gap: 20px;
+        flex-direction: column;
+      }
     }
     &-item {
       a {
         @include read-more($text);
+        @media (max-width: 550px) {
+          display: block;
+          text-align: right;
+        }
       }
       p {
         @include small-text($text);

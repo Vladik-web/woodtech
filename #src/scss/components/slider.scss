@@ -31,6 +31,9 @@
       font-weight: 300;
       font-size: 58px;
       line-height: 68px;
+      @media (max-width: 550px) {
+        font-size: 50px;
+      }
     }
     &__subtitle {
       border-radius: $radius;
@@ -83,6 +86,11 @@
     bottom: 10px;
     right: 0;
     padding: 35px;
+    @media (max-width: 550px) {
+      max-width: 100%;
+      gap: 10px;
+      padding: 35px 20px;
+    }
   }
   &__cur {
     color: #59606c;

@@ -1,8 +1,29 @@
 .nav {
+  @media (max-width: 767px) {
+    overflow: hidden;
+    height: 0;
+    position: absolute;
+    top: 85px;
+    width: 30%;
+    right: 0;
+    transition: height 0.25s ease;
+  }
+  @media (max-width: 660px) {
+    width: 100%;
+  }
   &__list {
     display: flex;
     list-style: none;
     gap: 20px;
+    @media (max-width: 767px) {
+      align-items: center;
+      padding: 20px;
+      flex-direction: column;
+      background-color: rgba($dark, 0.9);
+    }
+    @media (max-width: 660px) {
+      align-items: flex-start;
+    }
   }
   &__list-item {
   }
@@ -16,6 +37,9 @@
     &.active {
       background-color: rgba(#c4c4c4, 0.2);
       border-radius: $radius;
+      @media (max-width: 660px) {
+        background-color: transparent;
+      }
     }
   }
   &.black {
@@ -29,5 +53,8 @@
         color: $text;
       }
     }
+  }
+  &.active {
+    height: 200px;
   }
 }

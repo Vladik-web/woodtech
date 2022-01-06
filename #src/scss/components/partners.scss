@@ -13,11 +13,18 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    column-gap: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
   }
   &__item {
-    flex: 1 1 25%;
+    flex: 1 1 20%;
     text-align: center;
+    @media (max-width: 920px) {
+      flex: 1 1 40%;
+    }
+    @media (max-width: 424px) {
+      flex: 1 1 100%;
+    }
   }
   &__image {
     font-size: 0;
