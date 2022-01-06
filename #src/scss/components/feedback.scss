@@ -1,0 +1,53 @@
+.feedback {
+  padding: 70px 0;
+  &__inner {
+  }
+}
+
+.form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+  row-gap: 15px;
+  input,
+  textarea {
+    width: 100%;
+    outline: none;
+    border-radius: $radius;
+    border: 1px solid $light-disabled;
+    padding: 9px 15px 10px 15px;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 170%;
+    transition: 0.25s ease;
+    color: #333;
+    &::placeholder {
+      transition: 0.25s ease;
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 170%;
+
+      color: #888888;
+    }
+    &:focus {
+      border: 1px solid $accent;
+      &::placeholder {
+        color: #333;
+      }
+    }
+  }
+  textarea {
+    resize: none;
+    min-height: 140px;
+  }
+  button {
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 242px;
+  }
+}
